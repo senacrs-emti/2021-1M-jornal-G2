@@ -1,0 +1,72 @@
+body{
+    background-color: white;
+   
+}
+
+header{
+    background-color: #483D8B;
+    height: 70px;
+    width: 100%;
+    margin: 0 0;
+    padding: 0 0;
+}
+.transparent {
+    background: transparent;
+    border: 0;
+}
+
+.lupa {
+    width: 34px;
+    height: 17px;
+    margin: 10px;
+}
+
+.pesquisar{
+    margin-bottom: 20px;
+    margin-top: 8px;
+    width: 300px;
+    padding: 10px;
+    display: block;
+    margin-left: auto;
+}
+
+.logo{
+    width: 60px;
+    height: 60px;
+    padding-top: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.p1{
+   font-weight: bold;
+   margin: 0ch;
+   
+}
+
+.p2{
+    font-size: small;
+    margin-bottom: 35px;
+    
+}
+
+main{
+    padding-top: 90px;
+}
+
+main p{
+     padding-top: 30px;
+
+}
+p{
+    font-size:large;
+    text-align: justify;
+}
+footer{
+    width: 100%;
+    height: 70px;
+    background-color:#483D8B;
+    margin-top: 50px;
+}
