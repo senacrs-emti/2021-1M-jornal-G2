@@ -47,6 +47,30 @@ header{
     font-size: 0.9rem;
 }
 
+#um{
+    color: white;
+}
+
+#dois{
+    color: white;
+}
+
+#tres{
+    color: white;
+}
+
+#quatro{
+    color: white;
+}
+
+#cinco{
+    color: white;
+}
+
+#seis{
+    color: white;
+}
+
 .com-sm-8{
     float: left;
 }
@@ -57,6 +81,7 @@ header{
 
 h1{
     font-size: 2rem;
+    color: rgb(255, 255, 255);
 }
 
 p{

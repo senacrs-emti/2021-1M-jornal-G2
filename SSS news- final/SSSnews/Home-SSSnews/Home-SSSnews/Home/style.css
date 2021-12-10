@@ -45,6 +45,11 @@ header{
 
 .text{
     font-size: 0.9rem;
+    color: white;
+}
+
+.branco{
+    color: white;
 }
 
 .com-sm-8{
