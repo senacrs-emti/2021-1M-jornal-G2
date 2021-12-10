@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+    
+    <link rel="icon" href="https://cdn.discordapp.com/attachments/855995062093479949/903300155128811600/thumbnail.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <style>
+            @import url("http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css");
+            .menu, .menu-bar {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                height: 100%;
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                background: #f7f7f7;
+                z-index:10;  
+                overflow:hidden;
+                box-shadow: 2px 0 18px rgba(0, 0, 0, 0.26);
+            }
+            .menu li a{
+              display: inline-block;
+              text-indent: -500em;
+              height: 5em;
+              width: 5em;
+              line-height: 5em;
+              text-align:center;
+              color: #72739f;
+              position: relative;
+              border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+              transition: background 0.1s ease-in-out;
+            }
+            .menu li a:before {
+              font-family: FontAwesome;
+              speak: none;
+              text-indent: 0em;
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              font-size: 1.4em;
+            }
+            .menu li a.search:before {
+              content: "\f002";
+            }
+            
+            .menu li a.home:before {
+              content: "\f039";
+            }
+            .menu-bar li a:hover,
+            .menu li a:hover,
+            .menu li:first-child a {
+              background: #483D8B;
+              color: #fff;
+            }
+            .menu-bar{
+                overflow:hidden;
+                left:5em;
+                z-index:5;
+                width:0;
+                height:0;
+                transition: all 0.1s ease-in-out;
+            }
+            .menu-bar li a{
+              display: block;
+              height: 4em;
+              line-height: 4em;
+              text-align:center;
+              color: #72739f;
+              text-decoration:none;  
+              position: relative;
+              font-family:verdana;
+              border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+              transition: background 0.1s ease-in-out;
+            }
+            .menu-bar li:first-child a{
+                height:5em;
+                background: #483D8B;
+                color: #fff;    
+                line-height:5
+            }
+            
+            
+            .para{
+                color:#033f72;
+                padding-left:100px;
+                font-size:3em;
+                margin-bottom:20px;
+            }
+            
+            .open{
+                width:10em;
+                height:100%;
+            }
+            
+            @media all and (max-width: 500px) {
+                .container{
+                    margin-top:100px;
+                }
+                .menu{
+                    height:5em;
+                    width:100%;
+                }
+                .menu li{
+                    display:inline-block;
+                }
+                .menu-bar li a{
+                    width:100%;
+                }
+                .menu-bar{
+                    width:100%;
+                    left:0;
+                  bottom: 0;
+                    height:0;
+                }
+                .open{
+                    width:100%;
+                    height:auto;
+                }
+                .para{
+                padding-left:5px;
+            }  
+            }
+            @media screen and (max-height: 34em){
+              .menu li,
+              .menu-bar {
+                font-size:70%;
+              }
+            }
+            @media screen and (max-height: 34em) and (max-width: 500px){
+              .menu{
+                    height:3.5em;
+                }
+            }
+            </style>
+            
+              <script>
+              window.console = window.console || function(t) {};
+            </script>
+            
+              
+              
+              <script>
+              if (document.location.search.match(/type=embed/gi)) {
+                window.parent.postMessage("resize", "*");
+              }
+            </script>
+            
+            
+            </head>
+            
+            <body translate="no" >
+              <ul class="menu">
+            
+                  <li title="home"><a href="#" class="menu-button home">menu</a></li>
+                  
+                </ul>
+                
+                <ul class="menu-bar">
+                    <li><a href="#" class="menu-button">Menu</a></li>
+                    <li><a href="../Home/index.html">Home</a></li>
+                    <li><a href="../Editorial/index.html">Editorial</a></li>
+                    <li><a href="../GaleriaFotos/index.html">Galeria</a></li>
+                </ul>
+                <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
+            
+              <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+                  <script id="rendered-js" >
+            $(document).ready(function () {
+              $(".menu-button").click(function () {
+                $(".menu-bar").toggleClass("open");
+              });
+            });
+            //# sourceURL=pen.js
+                </script>
+    <header>
+        <div class="row">
+
+            <div class="col col-4 col-lg-4">
+    
+         
+            </div>
+    
+            <div class="col col-4 col-lg-4">
+               <img class="logo" src="https://cdn.discordapp.com/attachments/855995062093479949/903300155128811600/thumbnail.png">
+           </div>
+    
+      <div class="col col-4 col-lg-4">
+          <nav class="pesquisar">
+              <div class="container-fluid">
+                  <form class="d-flex">
+                      <input class="form-control me-2" type="Busca" placeholder="Busca" aria-="Busca">
+                  
+                      <button class="transparent">
+                         <img class="lupa" src="../Imagens/lupa.png" alt="Search image">
+                      </button>
+                  
+                  </form>
+                 </div>
+              </div>
+          </nav>
+    </div>
+    </div>
+    </header>
+
+     <div>
+        <title> Jornal SSS.</title>
+     </div>
+
+     <main>
+        <article class="container">
+            
+          <h1> Temporada nova, surto novo  </h1>
+          <p class="p1"> Por Clarice Seligman</p>
+          <p class="p2"> 28/9/2021 11:38</p>
+          <hr>
+        
+          <p>Sabe quando aquela série de sucesso lança uma nova temporada? Todos querem maratonar, todos querem conversar sobre. Eu conheço gente que acorda às 4 da manhã para ver a temporada nova e não tomar nenhum spoiler, e esse é o problema, os malditos spoilers. Se você entrar em alguma rede social na semana da estreia, a primeira coisa que vai aparecer é uma cena ou meme da série. Algumas pessoas esperam uns dias para compartilhar spoilers, mas outras não.</p>
+          <p>A sociedade atualmente vive em torno da internet, é muito fácil viralizar, então quando aquela série policial, que eu descobri depois de horas revirando plataformas de streaming viralizou após um meme no twitter, todos estavam animados para a segunda temporada, eu só queria saber se a minha personagem favorita iria sobreviver, pois ela levou um tiro na última cena da temporada passada. </p>
+          <p>Então enquanto eu contava os dias para lançar a nova parte, o meu medo só aumentava. Será que eu conseguiria desviar da maldição dos fãs e curtir a série ao máximo? A temporada seria lançada num sábado, então eu não precisava necessariamente acordar cedo, mesmo que fosse o que eu queria.</p>       
+          <p>Era 11:24 da manhã quando desbloqueei o celular, e ainda meio dormindo fui ver as notificações. Tinha mensagem de bom dia do grupo da família, um seguidor novo no instagram e uma notificação do youtube, uma jornalista que eu acompanhava lançando seu quadro semanal de novidades da cultura pop. </p>
+          <p>Logo em seguida lembrei dos meus planos, cliquei no aplicativo do streaming e fui direto para o primeiro episódio da segunda temporada da minha série. Assisti um episódio, e depois outro e outro, até acabar. Depois de algumas horas maratonando acabei de assistir tudo. Sem nenhum spoiler, a experiência completa. </p>
+          <p>Honestamente, sinto que preciso de mais, mesmo tendo visto a poucos dias. Já estou esperando a renovação, para daqui mais de um ano eu tenha esse surto de maratona de novo, porque mesmo sendo levemente estressante fugir de qualquer assunto relacionado, a sensação final é gratificante, sabendo que aproveitei ao máximo a série. </p>
+        
+      </article>
+    </main>
+    
+    <footer>
+      <img class="logo" src="https://cdn.discordapp.com/attachments/855995062093479949/903300155128811600/thumbnail.png">
+    </footer>
+
+
+
+    </body>
+</html>

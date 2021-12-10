@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+    
+    <link rel="icon" href="https://cdn.discordapp.com/attachments/855995062093479949/903300155128811600/thumbnail.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+  
+    <title>Editorial</title>
+  </head>
+  <body>
+    <style>
+        @import url("http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css");
+        .menu, .menu-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            height: 100%;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background: #f7f7f7;
+            z-index:10;  
+            overflow:hidden;
+            box-shadow: 2px 0 18px rgba(0, 0, 0, 0.26);
+        }
+        .menu li a{
+          display: inline-block;
+          text-indent: -500em;
+          height: 5em;
+          width: 5em;
+          line-height: 5em;
+          text-align:center;
+          color: #72739f;
+          position: relative;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+          transition: background 0.1s ease-in-out;
+        }
+        .menu li a:before {
+          font-family: FontAwesome;
+          speak: none;
+          text-indent: 0em;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          font-size: 1.4em;
+        }
+        .menu li a.search:before {
+          content: "\f002";
+        }
+        
+        .menu li a.home:before {
+          content: "\f039";
+        }
+        .menu-bar li a:hover,
+        .menu li a:hover,
+        .menu li:first-child a {
+          background: #483D8B;
+          color: #fff;
+        }
+        .menu-bar{
+            overflow:hidden;
+            left:5em;
+            z-index:5;
+            width:0;
+            height:0;
+            transition: all 0.1s ease-in-out;
+        }
+        .menu-bar li a{
+          display: block;
+          height: 4em;
+          line-height: 4em;
+          text-align:center;
+          color: #72739f;
+          text-decoration:none;  
+          position: relative;
+          font-family:verdana;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+          transition: background 0.1s ease-in-out;
+        }
+        .menu-bar li:first-child a{
+            height:5em;
+            background: #483D8B;
+            color: #fff;    
+            line-height:5
+        }
+        
+        
+        .para{
+            color:#033f72;
+            padding-left:100px;
+            font-size:3em;
+            margin-bottom:20px;
+        }
+        
+        .open{
+            width:10em;
+            height:100%;
+        }
+        
+        @media all and (max-width: 500px) {
+            .container{
+                margin-top:100px;
+            }
+            .menu{
+                height:5em;
+                width:100%;
+            }
+            .menu li{
+                display:inline-block;
+            }
+            .menu-bar li a{
+                width:100%;
+            }
+            .menu-bar{
+                width:100%;
+                left:0;
+              bottom: 0;
+                height:0;
+            }
+            .open{
+                width:100%;
+                height:auto;
+            }
+            .para{
+            padding-left:5px;
+        }  
+        }
+        @media screen and (max-height: 34em){
+          .menu li,
+          .menu-bar {
+            font-size:70%;
+          }
+        }
+        @media screen and (max-height: 34em) and (max-width: 500px){
+          .menu{
+                height:3.5em;
+            }
+        }
+        </style>
+        
+          <script>
+          window.console = window.console || function(t) {};
+        </script>
+        
+          
+          
+          <script>
+          if (document.location.search.match(/type=embed/gi)) {
+            window.parent.postMessage("resize", "*");
+          }
+        </script>
+        
+        
+        </head>
+        
+        <body translate="no" >
+          <ul class="menu">
+        
+              <li title="home"><a href="#" class="menu-button home">menu</a></li>
+              
+            </ul>
+            
+            <ul class="menu-bar">
+                <li><a href="#" class="menu-button">Menu</a></li>
+                <li><a href="../Home/index.html">Home</a></li>
+                <li><a href="../Editorial/index.html">Editorial</a></li>
+                <li><a href="../GaleriaFotos/index.html">Galeria</a></li>
+            </ul>
+            <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
+        
+          <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+              <script id="rendered-js" >
+        $(document).ready(function () {
+          $(".menu-button").click(function () {
+            $(".menu-bar").toggleClass("open");
+          });
+        });
+        //# sourceURL=pen.js
+            </script>
+
+    <header>
+
+        <header>
+            <div class="row">
+    
+                <div class="col col-4 col-lg-4">
+        
+              <!---aqui vai ter o menu hamburger quando eu aprender a fazer-->
+        
+                </div>
+        
+                <div class="col col-4 col-lg-4">
+                   <img class="logo" src="https://cdn.discordapp.com/attachments/855995062093479949/903300155128811600/thumbnail.png">
+               </div>
+        
+          <div class="col col-4 col-lg-4">
+              <nav class="pesquisar">
+                  <div class="container-fluid">
+                      <form class="d-flex">
+                          <input class="form-control me-2" type="Busca" placeholder="Busca" aria-="Busca">
+                      
+                          <button class="transparent">
+                             <img class="lupa" src="../Imagens/lupa.png" alt="Search image">
+                          </button>
+                      
+                      </form>
+                     </div>
+                  </div>
+              </nav>
+        </div>
+        </div>
+        </header>
+    <div class="container">
+      <div class="row">
+        
+        <div class="col-sm-12 col-lg-3">
+
+          <a href="../Noticia/index.html" role="button" aria-pressed="true">
+            <img class="img1" src="https://i.pinimg.com/564x/eb/b5/03/ebb5037f912b1cb94b446e6bdb65a5a6.jpg" alt="vídeo">
+          </a>
+        
+        </div>
+        
+        <div class="col-sm-12 col-lg-9">
+
+          <div class="texto">
+            <h1>NOTÍCIA</h1>
+            <h2>Pandemia traz necessidade de mudanças na instituição Senac RS</h2>
+            <br>
+            <h3>18/10/2021 12:11</h3>
+          </div>
+
+        </div>
+
+        <div class="col-sm-12 col-lg-3">
+
+          <a href="../Entrevista/index.html" role="button" aria-pressed="true">
+            <img class="img2" src="https://i.pinimg.com/564x/3a/f2/6c/3af26c765362a387920d70df6796b87f.jpg" alt="vídeo">
+          </a>
+        
+        </div>
+        
+        <div class="col-sm-12 col-lg-9">
+
+          <div class="texto">
+            <h1>ENTREVISTA</h1>
+            <h2>Entrevista com Cineasta Flavia Seligman</h2>
+            <br>
+            <h3>19/10/2021 9h56</h3>
+          </div>
+    
+        </div>
+    
+        <div class="col-sm-12 col-lg-3">
+    
+          <a href="../Artigo de Opiniao-Alice/index.html" role="button" aria-pressed="true">
+            <img class="img3" src="https://img.olhardigital.com.br/wp-content/uploads/2021/03/whatsapp-logo.jpg" alt="vídeo">
+          </a>
+        
+        </div>
+        
+    <div class="col-sm-12 col-lg-9">
+
+      <div class="texto">
+        <h1>ARTIGO DE OPINIÃO</h1>
+        <h2>O Imediatismo no Whatsapp</h2>
+        <br>
+        <h3>19/10/2021 9h56</h3>
+      </div>
+
+    </div>
+
+    <div class="col-sm-12 col-lg-3">
+
+      <a href="../Artigo de Opiniao-Clarice/index.html"role="button" aria-pressed="true">
+        <img class="img4" src="https://internacionaldaamazoniacom.files.wordpress.com/2021/06/pride.jpg?w=630" alt="vídeo">
+      </a>
+    
+    </div>
+    
+    <div class="col-sm-12 col-lg-9">
+
+      <div class="texto">
+        <h1>ARTIGO DE OPINIÃO</h1>
+        <h2>Representatividade LGBTQIA+ no entretenimento, a importância de ver no dia a dia.</h2>
+        <br>
+        <h3>19/10/2021 14h24</h3>
+      </div>
+
+    </div>
+  
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    
+    <div class="col-sm-12 col-lg-3">
+
+      <a href="../Artigo de Opiniao- Julia/index.html" role="button" aria-pressed="true">
+        <img class="img1" src="http://conteudo.imguol.com.br/c/noticias/bd/2016/08/02/duvida-pergunta-interrogacao-1470161342410_v2_1920x1280.jpg" alt="vídeo">
+      </a>
+    
+    </div>
+    
+    <div class="col-sm-12 col-lg-9">
+
+      <div class="texto">
+        <h1>ARTIGO DE OPINIÃO</h1>
+        <h2>E tá errado? </h2>
+        <h3>19/10/2021 9h56</h3>
+      </div>
+
+    </div>
+
+    <div class="col-sm-12 col-lg-3">
+
+      <a href="../Artigo de Opiniao- Ana/index.html" role="button" aria-pressed="true">
+        <img class="img2" src="https://www.prenota4u.com/wp-content/uploads/2019/01/Bolsa-de-Estudos-na-Universidade-de-Bolonha-%E2%80%93-Inscri%C3%A7%C3%B5es.jpg" alt="vídeo">
+      </a>
+    
+    </div>
+    
+    <div class="col-sm-12 col-lg-9">
+
+      <div class="texto">
+        <h1>ARTIGO DE OPINIÃO</h1>
+        <h2>Vida Universitária na Itália</h2>
+        <h3>19/10/2021 9h56</h3>
+      </div>
+
+    </div>
+
+    <div class="col-sm-12 col-lg-3">
+
+      <a href="../Cronica-Julia/index.html" role="button" aria-pressed="true">
+        <img class="img3" src="https://i0.wp.com/visionclinica.com.br/wp-content/uploads/2020/05/mulher.jpeg?fit=1140%2C619&ssl=1" alt="vídeo">
+      </a>
+    
+    </div>
+    
+<div class="col-sm-12 col-lg-9">
+
+  <div class="texto">
+    <h1>CRÔNICA</h1>
+    <h2>Luz Azul</h2>
+    <br>
+    <h3>19/10/2021 9h56</h3>
+  </div>
+
+</div>
+
+<div class="col-sm-12 col-lg-3">
+
+  <a href="../Cronica-Ana/index.html"role="button" aria-pressed="true">
+    <img class="img4" src="https://www.justlia.com.br/wp-content/uploads/2009/08/adesivos-fofos.jpg" alt="vídeo">
+  </a>
+
+</div>
+
+<div class="col-sm-12 col-lg-9">
+
+  <div class="texto">
+    <h1>CRÔNICA</h1>
+    <h2>Figurinhas</h2>
+    <h3>19/10/2021 14h24</h3>
+  </div>
+
+</div>
+
+</div>
+</div>
+
+<div class="container">
+  <div class="row">
+    
+    <div class="col-sm-12 col-lg-3">
+
+      <a href="../Cronica-Alice/index.html" role="button" aria-pressed="true">
+        <img class="img1" src="https://fenajud.org.br/wp-content/uploads/2018/03/15e4a781019b00bac11e1271ee1aaaa2002339c5.jpg" alt="vídeo">
+      </a>
+    
+    </div>
+    
+    <div class="col-sm-12 col-lg-9">
+
+      <div class="texto">
+        <h1>CRÔNICA</h1>
+        <h2>Trabalho em grupo, o herói ou o vilão</h2>
+        <br>
+        <h3>19/10/2021 9h56</h3>
+      </div>
+
+    </div>
+
+    <div class="col-sm-12 col-lg-3">
+
+      <a href="../Cronica-Clarice/index.html" role="button" aria-pressed="true">
+        <img class="img2" src="https://static.globalnoticias.pt/dv/image.jpg?brand=DV&type=generate&guid=493b310e-2842-41bf-bdbd-e93af969885c&w=800&h=450&t=20210915134200" alt="vídeo">
+      </a>
+    
+    </div>
+    
+    <div class="col-sm-12 col-lg-9">
+
+      <div class="texto">
+        <h1>CRÔNICA</h1>
+        <h2>Temporada nova, surto novo</h2>
+        <br>
+        <h3>19/10/2021 9h56</h3>
+      </div>
+
+    </div>
+
+    <div class="col-sm-12 col-lg-3">
+
+      <a href="../Noticia Feira/index.html" role="button" aria-pressed="true">
+        <img class="img3" src="https://i.pinimg.com/564x/33/2c/6d/332c6d51056bbcf017066b0bc63afad2.jpg" alt="vídeo">
+      </a>
+    
+    </div>
+    
+<div class="col-sm-12 col-lg-9">
+
+  <div class="texto">
+    <h1>NOTÍCIA</h1>
+    <h2>  Mostra Cultural</h2>
+    <br>
+    <h3>19/10/2021 9h56</h3>
+  </div>
+
+</div>
+
+<div class="col-sm-12 col-lg-3">
+
+  <a href="../Cronica-Otávio/index.html"role="button" aria-pressed="true">
+    <img class="img4" src="https://www.infomoney.com.br/wp-content/uploads/2019/06/liberdade.jpg?fit=900%2C600&quality=50&strip=all" alt="vídeo">
+  </a>
+
+</div>
+<div class="col-sm-12 col-lg-9">
+
+  <div class="texto">
+    <h1>CRÔNICA</h1>
+    <h2>Liberdade</h2>
+    <br>
+    <h3>19/10/2021 9h56</h3>
+  </div>
+
+</div>
+
+<div class="col-sm-12 col-lg-3">
+
+  <a href="../Artigo de opinião- Otávio/index.html" role="button" aria-pressed="true">
+    <img class="img3" src="https://logosmarcas.net/wp-content/uploads/2021/09/Lil-Peep-Simbolo.png" alt="vídeo">
+  </a>
+
+</div>
+
+<div class="col-sm-12 col-lg-9">
+
+  <div class="texto">
+    <h1>ARTIGO DE OPINIÃO</h1>
+    <h2>Lil Peep</h2>
+    <br>
+    <h3>19/10/2021 14h24</h3>
+  </div>
+
+</div>
+
+</div>
+</div>
+
+
+
+
+
+
+    <footer>
+        <img class="logo" src="https://cdn.discordapp.com/attachments/855995062093479949/903300155128811600/thumbnail.png">
+    </footer>
+  
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
