@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+    
+    <link rel="icon" href="https://cdn.discordapp.com/attachments/855995062093479949/903300155128811600/thumbnail.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>SSSNews</title>
+  </head>
+  <body>
+    
+    <style>
+      @import url("http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css");
+      .menu, .menu-bar {
+          position: fixed;
+          bottom: 0;
+          left: 0;
+          height: 100%;
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          background: #f7f7f7;
+          z-index:10;  
+          overflow:hidden;
+          box-shadow: 2px 0 18px rgba(0, 0, 0, 0.26);
+      }
+      .menu li a{
+        display: inline-block;
+        text-indent: -500em;
+        height: 5em;
+        width: 5em;
+        line-height: 5em;
+        text-align:center;
+        color: #72739f;
+        position: relative;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        transition: background 0.1s ease-in-out;
+      }
+      .menu li a:before {
+        font-family: FontAwesome;
+        speak: none;
+        text-indent: 0em;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        font-size: 1.4em;
+      }
+      .menu li a.search:before {
+        content: "\f002";
+      }
+      
+      .menu li a.home:before {
+        content: "\f039";
+      }
+      .menu-bar li a:hover,
+      .menu li a:hover,
+      .menu li:first-child a {
+        background: #483D8B;
+        color: #fff;
+      }
+      .menu-bar{
+          overflow:hidden;
+          left:5em;
+          z-index:5;
+          width:0;
+          height:0;
+          transition: all 0.1s ease-in-out;
+      }
+      .menu-bar li a{
+        display: block;
+        height: 4em;
+        line-height: 4em;
+        text-align:center;
+        color: #72739f;
+        text-decoration:none;  
+        position: relative;
+        font-family:verdana;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        transition: background 0.1s ease-in-out;
+      }
+      .menu-bar li:first-child a{
+          height:5em;
+          background: #483D8B;
+          color: #fff;    
+          line-height:5
+      }
+      
+      
+      .para{
+          color:#033f72;
+          padding-left:100px;
+          font-size:3em;
+          margin-bottom:20px;
+      }
+      
+      .open{
+          width:10em;
+          height:100%;
+      }
+      
+      @media all and (max-width: 500px) {
+          .container{
+              margin-top:100px;
+          }
+          .menu{
+              height:5em;
+              width:100%;
+          }
+          .menu li{
+              display:inline-block;
+          }
+          .menu-bar li a{
+              width:100%;
+          }
+          .menu-bar{
+              width:100%;
+              left:0;
+            bottom: 0;
+              height:0;
+          }
+          .open{
+              width:100%;
+              height:auto;
+          }
+          .para{
+          padding-left:5px;
+      }  
+      }
+      @media screen and (max-height: 34em){
+        .menu li,
+        .menu-bar {
+          font-size:70%;
+        }
+      }
+      @media screen and (max-height: 34em) and (max-width: 500px){
+        .menu{
+              height:3.5em;
+          }
+      }
+      </style>
+      
+        <script>
+        window.console = window.console || function(t) {};
+      </script>
+      
+        
+        
+        <script>
+        if (document.location.search.match(/type=embed/gi)) {
+          window.parent.postMessage("resize", "*");
+        }
+      </script>
+      
+      
+      </head>
+      
+      <body translate="no" >
+        <ul class="menu">
+      
+            <li title="home"><a href="#" class="menu-button home">menu</a></li>
+            
+          </ul>
+          
+          <ul class="menu-bar">
+              <li><a href="#" class="menu-button">Menu</a></li>
+              <li><a href="../Home/index.html">Home</a></li>
+              <li><a href="../Editorial/index.html">Editorial</a></li>
+              <li><a href="../GaleriaFotos/index.html">Galeria</a></li>
+          </ul>
+          <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
+      
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+            <script id="rendered-js" >
+      $(document).ready(function () {
+        $(".menu-button").click(function () {
+          $(".menu-bar").toggleClass("open");
+        });
+      });
+      //# sourceURL=pen.js
+          </script>
+      
+    <header>
+      <div class="row">
+
+        <div class="col col-4 col-lg-4">
+
+      <!---aqui vai ter o menu hamburger quando eu aprender a fazer-->
+
+        </div>
+
+        <div class="col col-4 col-lg-4">
+           <img class="logo" src="https://cdn.discordapp.com/attachments/855995062093479949/903300155128811600/thumbnail.png">
+       </div>
+
+  <div class="col col-4 col-lg-4">
+      <nav class="pesquisar">
+          <div class="container-fluid">
+              <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-="Search">
+              
+                  <button class="transparent">
+                     <img class="lupa" src="../Imagens/lupa.png" alt="Search image">
+                  </button>
+              
+              </form>
+             </div>
+          </div>
+      </nav>
+</div>
+</div>
+</header>
+
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" style="margin-top: 2.5rem;">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="EM-Senac.png" alt="Primeiro Slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="Em-Senac-2.png" alt="Segundo Slide">
+        </div>
+      </div>
+    </div>
+    <main>
+      <!-- NOTÍCIAS PRINCIPAIS -->
+        <div class="container">
+            <div class="row">
+              <div class="col-sm-8">
+                <div id="notice1">
+                    <a href="../Noticia/index.html"> 
+                      <img src="https://portalgramadonews.com.br/wp-content/uploads/2019/09/portalgramadonews.com.br-senac-gramado-oferta-cursos-de-espanhol-senac-1024x535.jpg"  class="imgxp" alt="">
+                    </a>
+                      <h6 class="align-text">Pandemia traz necessidade de mudanças na instituição Senac RS</h6>
+                    <p class="text align-text">Como o Senac RS se adapta ao modelo EAD em plena pandemia do Corona vírus.</p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+               
+                </div>
+                <div id="notice1">
+                  <a href="../Entrevista/index.html">
+                  <img src="https://i.pinimg.com/564x/3a/f2/6c/3af26c765362a387920d70df6796b87f.jpg"  class="imgxp" alt="">
+                 </a>
+                  <h6 class="align-text"> Entrevista com Cineasta Flavia Seligman <br></h6>
+                    <p class="text align-text">Como funciona a indústria cinematográfica brasileira? De que lugar surge a verba dos filmes nacionais? Essas e outras respostas estão na nossa entrevista, com a cineasta e professora Flavia Seligman. Só aqui no SSS News</p>
+                    <br>
+                    <br>
+                    <br>
+                  </div>
+                <div id="notice1">
+                  <a href="../Noticia Feira/index.html">
+                  <img src="https://i.pinimg.com/564x/33/2c/6d/332c6d51056bbcf017066b0bc63afad2.jpg"  class="imgxp" alt="">
+                 </a>
+                  <h6 class="align-text"> Mostra Cultural<br></h6>
+                    <p class="text align-text"> Neste sábado, dia 6 de novembro, aconteceu no Senac Gestão e Negócios a mostra cultural, um evento onde os alunos do primeiro ano do Ensino Médio apresentaram seus trabalhos desenvolvidos na matéria de projeto de vida. </p>
+                <br>
+                <br>
+                <br>
+                  </div>
+                <div id="notice1">
+                  <a href="../Artigo de Opiniao-Alice/index.html">
+                  <img src="https://img.olhardigital.com.br/wp-content/uploads/2021/03/whatsapp-logo.jpg"  class="imgxp" alt="">
+                 </a>           
+                  <h6 class="align-text">Artigo de Opinião - O Imediatismo no Whatsapp </h6>
+                  <br>
+                    <p class="text align-text">O WhatsApp se tornou mais do que só uma rede social. Hoje muitas pessoas trabalham através dele, e ele abriu muitas portas para novos empregos, novas formas de venda e novas formas de se comunicar com seus clientes.</p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                  </div>
+                <div id="notice1">
+                  <a href="../Artigo de Opiniao-Clarice/index.html">
+                  <img src="https://internacionaldaamazoniacom.files.wordpress.com/2021/06/pride.jpg?w=630"  class="imgxp" alt="">
+                 </a>
+                  <h6 class="align-text">Artigo de Opinião - Representatividade LGBTQIA+ no entretenimento, a importância de ver no dia a dia.</h6>
+                    <p class="text align-text">Atualmente vemos muitos debates e polemicas sobre representatividade, nas telas, no mercado de trabalho, no mundo. Pelo motivo dessa causa, tão simples, que só querer que todos terem oportunidade e voz...</p>
+                <br>
+                <br>
+                <br>
+                <br>
+               
+                  </div>
+                  
+                <div id="notice1">
+                  <a href="../Artigo de Opiniao- Julia/index.html">
+                  <img src="http://conteudo.imguol.com.br/c/noticias/bd/2016/08/02/duvida-pergunta-interrogacao-1470161342410_v2_1920x1280.jpg"  class="imgxp" alt="">
+                  </a> 
+                  <h6 class="align-text">   Artigo de Opinião - E tá errado? </h6>
+                  <br>
+                    <p class="text align-text">A língua portuguesa é uma das línguas mais ricas em questão de diversidade, a cultura, os sotaques, as pessoas. As variedades linguísticas são o que fazem a nossa língua ter vida, muitos conservadores não veem essa diversidade como algo positivo entrando em uma série de pré-julgamentos. </p>
+               <br>
+               <br>
+               <br>
+               
+                  </div>
+                <div id="notice1">
+                  <a href="../Artigo de Opiniao- Ana/index.html">
+                  <img src="https://www.prenota4u.com/wp-content/uploads/2019/01/Bolsa-de-Estudos-na-Universidade-de-Bolonha-%E2%80%93-Inscri%C3%A7%C3%B5es.jpg"  class="imgxp" alt="">
+                 </a>
+                 <h6 class="align-text">   Artigo de Opinião - Vida Universitária na Itália  </h6>
+                 <br>
+                  <p class="text align-text">A Itália é um dos países mais mágicos e encantadores do mundo, vilas, prédios parados no tempo recheados de história, de praias a montanhas, cada coisa mais linda que outra.</p>
+            
+                </div>
+                
+              </div>
+            <!-- NOTÍCIAS LATERAIS -->
+              <div class="col-sm-4">
+                <div>
+                  
+                    <a href="../Cronica-Julia/index.html">
+                    <img src="https://i0.wp.com/visionclinica.com.br/wp-content/uploads/2020/05/mulher.jpeg?fit=1140%2C619&ssl=1" class="imgxp" style="margin-top: 1rem;">
+                    </a>
+                    <h1> Luz Azul</h1>
+                    <p class="text"> Crônica: Por Júlia</p>
+                </a>
+                <div>
+                    <a href="../Cronica-Ana/index.html">
+                    <img src="https://i.pinimg.com/564x/94/19/ac/9419ac0234c2af0fb3aacde8ce8e2ea3.jpg" class="imgxp">
+                    </a>
+                    <h1>Figurinhas</h1>
+                    <p class="text">Crônica: Por Ana </p>
+                </div>
+                
+              </div>
+              <div>
+                <a href="../Cronica-Alice/index.html">
+                <img src="https://fenajud.org.br/wp-content/uploads/2018/03/15e4a781019b00bac11e1271ee1aaaa2002339c5.jpg" class="imgxp">
+                </a>
+                <h1>Trabalho em grupo, o herói ou o vilão</h1>
+                <p class="text">Crônica: Por Alice </p>
+            </div>
+            <div>
+              <a href="../Cronica-Clarice/index.html">
+              <img src="https://static.globalnoticias.pt/dv/image.jpg?brand=DV&type=generate&guid=493b310e-2842-41bf-bdbd-e93af969885c&w=800&h=450&t=20210915134200" class="imgxp">
+              </a>
+              <h1>Temporada nova, surto novo </h1>
+              <p class="text">Crônica: Por Clarice</p>
+          </div>
+          <div>
+            <a href="../Artigo de opinião- Otávio/index.html">
+            <img src="https://logosmarcas.net/wp-content/uploads/2021/09/Lil-Peep-Simbolo.png" class="imgxp">
+            </a>
+            <h1>Lil Peep</h1>
+            <p class="text"> Artigo de Opinião</p>
+        </div>
+             
+        <a href="../Cronica-Otávio/index.html">
+          <img src="https://www.infomoney.com.br/wp-content/uploads/2019/06/liberdade.jpg?fit=900%2C600&quality=50&strip=all" class="imgxp" style="margin-top: 1rem;">
+          </a>
+          <h1> Liberdade </h1>
+          <p class="text"> Crônica: Por Otávio</p>
+      </a>
+          </div>
+          
+          
+    </main>
+    <footer>
+      
+    <footer>
+        <img class="logo" src="https://cdn.discordapp.com/attachments/855995062093479949/903300155128811600/thumbnail.png">
+    </footer>
+ 
+
+    <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
